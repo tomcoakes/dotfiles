@@ -5,10 +5,14 @@ export ZSH=/Users/tomc/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -49,15 +53,10 @@ plugins=(git)
 
 # User configuration
 
-export PATH="${HOME}/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
-export MM_TEAM_NAME=PROFILER
-# export PATH="~/Documents/mergermarket/unofficial-build-tools/bin:$PATH"
-
 source $ZSH/oh-my-zsh.sh
-
-DEFAULT_USER=tomc
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -83,33 +82,3 @@ DEFAULT_USER=tomc
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-alias chrome='open -a Google\ Chrome.app'
-alias projects='cd ~/Documents/Coding/dev'
-alias merger='cd ~/Documents/mergermarket'
-alias intel='cd ~/Documents/mergermarket/intel-search'
-alias sublime='open -a Sublime\ Text.app'
-alias safari='open -a Safari.app'
-alias atom='open -a Atom.app'
-alias mcd='open -a MacDown.app'
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-
-# DOCKER CONFIGURATION
-
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/tomc/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
-
-
-# ANDROID SDK
-
-export ANDROID_HOME=/Users/tomc/Library/Android/sdk
-export PATH="/Users/tomc/Library/Android/sdk/platform-tools:$PATH"
-export PATH="${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform_tools"
-export JAVA_HOME=$(/usr/libexec/java_home)
-export NVM_DIR="/Users/tomc/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
